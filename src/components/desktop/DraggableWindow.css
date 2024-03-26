@@ -1,0 +1,57 @@
+#windowContentDiv{
+    overflow-y: scroll;
+    height: 93%;
+    width: 100%;
+    --sb-track-color: transparent;
+    --sb-thumb-color: #F151BB;
+    --sb-size: 20px;
+}
+#windowContentDiv::-webkit-scrollbar{
+    width:14px;
+    padding-right: 5px;
+}
+
+#windowContentDiv::-webkit-scrollbar-thumb{
+    background: #F151BB;
+    border-radius: 24px;
+    border: 1px solid #000000;
+}
+.contentContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.scrollbarOffset{
+    width: 5px;
+}
+.windowTitleBar{
+    padding: 5px;
+    cursor: grab; 
+    background-color: #62dbcf; 
+    user-select: none; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.windowTitleBar button{
+    background-color: transparent;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.windowDiv {
+    background-color: #D9D9D9;
+    border: 1px solid black;
+    box-shadow: -10px 10px 0px 1px #343434;
+    -webkit-box-shadow: -10px 10px 0px 1px #343434;
+    -moz-box-shadow: -10px 10px 0px 1px #343434;
+}
+
+.windowCloseButton{
+    height: 14px;
+}
