@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import './LogoutButton.css'
 
 function LogoutButton() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function LogoutButton() {
   };
 
   return (
-    <button onClick={handleLogout}>Logout</button>
+    <button id='logoutNavButton' onClick={handleLogout}>Log Out</button>
   );
 }
 

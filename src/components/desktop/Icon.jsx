@@ -13,8 +13,6 @@ const Icon = ({ id, src, initialPosition, onDoubleClick }) => {
     top: initialPosition.y,
     transform: transform ? `translate3d(${transform.x}px, ${transform.y}px, 0)` : 'none',
     touchAction: 'none',
-    width: 50,
-    height: 50,
     cursor: 'grab',
   };
 
