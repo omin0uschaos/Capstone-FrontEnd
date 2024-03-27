@@ -7,11 +7,10 @@ function DailyNews() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // Adjust to Pacific Daylight Time (PDT), considering it's GMT-7
   const getPDTDate = () => {
-    const now = new Date(); // Current date/time in user's local timezone
-    const pdtOffset = 7 * 60; // PDT offset in minutes
-    const localOffset = now.getTimezoneOffset(); // User's local timezone offset in minutes
+    const now = new Date();
+    const pdtOffset = 7 * 60; 
+    const localOffset = now.getTimezoneOffset(); 
     const pdtDate = new Date(now.getTime() - ((pdtOffset + localOffset) * 60 * 1000));
     return pdtDate.toISOString().slice(0, 10);
   };
@@ -49,7 +48,6 @@ function DailyNews() {
   const handleNextDay = () => {
     const nextDay = new Date(currentDate);
     nextDay.setDate(nextDay.getDate() + 1);
-    // Prevent going to the next day if it's beyond the initial PDT date
     const initialPDTDate = new Date(getPDTDate());
     if (nextDay > initialPDTDate) {
       return;
