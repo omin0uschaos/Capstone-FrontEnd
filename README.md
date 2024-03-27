@@ -67,3 +67,7 @@ Voyatika OS is designed to mirror the intuitive, user-friendly interface of cont
 ### Administrative Actions and Permissions
 
 Some actions within Voyatika OS, such as editing and deleting user information, are restricted to admin accounts. These functions are critical for maintaining the integrity and security of the operating system and are therefore not accessible to all users.
+
+###Back-End GitHub Repo
+
+If you would like to also take a look at the github repo for the back end of Voyatika, navigate to [https://github.com/omin0uschaos/Capstone-BackEnd](https://github.com/omin0uschaos/Capstone-BackEnd)
