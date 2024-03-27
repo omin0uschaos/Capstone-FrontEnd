@@ -6,7 +6,7 @@ import UserGreeting from './usergreeting/UserGreeting';
 
 function TaskBar() {
   return (
-    <div id='taskBar'><div id='vosLogo'><img src={voslogo} alt="" srcset="" /><LogoutButton /><UserGreeting /></div>
+    <div id='taskBar'><div id='vosLogo'><img src={voslogo} alt="VOS" /><LogoutButton /><UserGreeting /></div>
         <Clock />
     </div>
   )

@@ -138,48 +138,55 @@ function CrewDB() {
         </>
       )}
       {selectedUser && !editMode && (
-        <div>
+        <div className='editProfileDiv'>
+          <div className='profileButtonsDiv'>
           <button onClick={() => { setSelectedUser(null); setUserPortraitUrl(''); }}>Back to list</button>
           <button onClick={handleEdit}>Edit User</button>
+          </div>
           <h2>{selectedUser.personalinfo.first} {selectedUser.personalinfo.last}'s Profile</h2>
           <div id='profilePortraitContainer'>
             <img src={userPortraitUrl} alt="User Portrait" />
           </div>
-          <p>Full Name: {selectedUser.personalinfo.first} {selectedUser.personalinfo.last}</p>
-          <p>Nickname: {selectedUser.personalinfo.nickname}</p>
-          <p>Age: {selectedUser.personalinfo.age}</p>
-          <p>BirthDate: {selectedUser.personalinfo.dob}</p>
-          <p>Department: {selectedUser.department}</p>
-          <p>Rank: {selectedUser.rank}</p>
-          <p>Title: {selectedUser.title}</p>
+          <div className='profileInfoDiv'>
+          <p><strong>Full Name:</strong>  {selectedUser.personalinfo.first} {selectedUser.personalinfo.last}</p>
+          <p><strong>Nickname:</strong>  {selectedUser.personalinfo.nickname}</p>
+          <p><strong>Age:</strong>  {selectedUser.personalinfo.age}</p>
+          <p><strong>BirthDate:</strong>  {selectedUser.personalinfo.dob}</p>
+          <p><strong>Department:</strong>  {selectedUser.department}</p>
+          <p><strong>Rank:</strong>  {selectedUser.rank}</p>
+          <p><strong>Title:</strong>  {selectedUser.title}</p>
+          </div>
         </div>
       )}
       {selectedUser && editMode && (
         <form onSubmit={handleEditSubmit}>
-          <button onClick={() => setEditMode(false)}>Cancel</button>
+          <div className='editCancelButtonDiv'>
+            <button className='editCancelButton' onClick={() => setEditMode(false)}>Cancel</button>
+        </div>
+          
           <h2>Edit {selectedUser.personalinfo.first} {selectedUser.personalinfo.last}'s Profile</h2>
           <label>
-            First Name:
+           <span>First Name:</span> 
             <input name="first" value={editFormData.first} onChange={handleEditChange} />
           </label>
           <label>
-            Last Name:
+           <span>Last Name:</span> 
             <input name="last" value={editFormData.last} onChange={handleEditChange} />
           </label>
           <label>
-            Nickname:
+           <span>Nickname:</span> 
             <input name="nickname" value={editFormData.nickname} onChange={handleEditChange} />
           </label>
           <label>
-            Department:
+           <span>Department:</span> 
             <input name="department" value={editFormData.department} onChange={handleEditChange} />
           </label>
           <label>
-            Rank:
+           <span>Rank:</span> 
             <input name="rank" value={editFormData.rank} onChange={handleEditChange} />
           </label>
           <label>
-            Title:
+           <span>Title:</span> 
             <input name="title" value={editFormData.title} onChange={handleEditChange} />
           </label>
           <button type="submit">Save Changes</button>

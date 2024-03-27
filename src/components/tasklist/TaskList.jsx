@@ -14,7 +14,7 @@ function TaskList() {
 
   useEffect(() => {
     fetchUserInfo();
-  }, []); // Dependency array left empty to only run once on mount
+  }, []); 
 
   const fetchUserInfo = async () => {
     if (!username || !token) {
@@ -25,9 +25,9 @@ function TaskList() {
 
     try {
       const userInfoResponse = await axios.get(`https://voyatikadb.onrender.com/api/users/userinfo/${username}`, {
-        headers: { 'Authorization': `${token}` } // Ensure you are using Bearer token correctly
+        headers: { 'Authorization': `${token}` }
       });
-      setUserId(userInfoResponse.data._id); // Correctly set userId for later use
+      setUserId(userInfoResponse.data._id); 
       setTasks(userInfoResponse.data.taskList || []);
     } catch (error) {
       console.error('Error fetching user info:', error);
@@ -45,8 +45,6 @@ function TaskList() {
         taskComplete: false
       }, { headers: { 'Authorization': `${token}` } });
 
-      // Use the response to update the task list if necessary
-      // Assuming the API returns the full task including its ID
       setTasks(prev => [...prev, response.data]);
       setNewTaskName('');
       setNewTaskDetail('');
@@ -84,7 +82,7 @@ function TaskList() {
   return (
     <div className='taskListContentDiv'>
       <h2>Your Tasks</h2>
-      <div>
+      <div className='newTaskDiv'>
         <input
           type="text"
           placeholder="New task name"

@@ -1,7 +1,47 @@
 .taskListContentDiv{
     color: black;
+    margin-right: 5px;
 }
 .taskListContentDiv ul{
     list-style-type: none;
     margin: 0;
+}
+.taskListContentDiv li{
+    list-style-type: none;
+    margin-bottom: 40px;
+}
+.taskListContentDiv p{
+    text-align: center;
+}
+.taskListContentDiv h2{
+    text-align: center;
+}
+.newTaskDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.newTaskDiv input{
+    padding: 5px;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: black;
+
+}
+.taskListContentDiv button{
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    margin-left:5px;
+    padding: 5px;
+    transition-duration: 200ms;
+    box-shadow: -2px 2px 0px 1px #343434;
+    -webkit-box-shadow: -2px 2px 0px 1px #343434;
+    -moz-box-shadow: -2px 2px 0px 1px #343434;
+}
+.taskListContentDiv button:hover{
+ background-color: #bebebe;
 }

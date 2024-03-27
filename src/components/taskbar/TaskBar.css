@@ -24,3 +24,6 @@
 #userGreetingName{
     font-weight: 700;
 }
+.greetingLoadingDiv{
+    white-space: nowrap;
+}

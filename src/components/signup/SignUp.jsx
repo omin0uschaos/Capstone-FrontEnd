@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './SignUp.css'
 
-const SignUp = () => {
+const SignUp = ({ onSignUpSuccess }) => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-    portrait: '',
     isAdmin: false,
     rank: '',
-    clearanceLevel: '',
     department: '',
     title: '',
     credits: 0,
@@ -19,11 +17,8 @@ const SignUp = () => {
       nickname: '',
       age: '',
       dob: '',
-      enlistDate: '',
-      marital: '',
       homeplanet: '',
       military: '',
-      education: '',
       favFood: '',
       favSport: '',
     }
@@ -51,7 +46,8 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const response = await axios.post('https://voyatikadb.onrender.com/api/users/user/add', formData);
-      console.log(response.data.message);
+      console.log(response.data.message)
+      if (onSignUpSuccess) onSignUpSuccess();
     } catch (error) {
       console.error('Error signing up:', error.response.data.message);
     }
@@ -74,12 +70,6 @@ const SignUp = () => {
         onChange={handleChange}
         placeholder="Password"
         required
-      />
-      <input
-        name="portrait"
-        value={formData.portrait}
-        onChange={handleChange}
-        placeholder="Portrait URL"
       />
         <select name="rank" value={formData.rank} onChange={handleChange} required>
           <option value="">Select Rank</option>

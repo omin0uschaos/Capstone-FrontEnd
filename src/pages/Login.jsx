@@ -6,7 +6,7 @@ import SignUp from '../components/signup/SignUp';
 import './Login.css'
 
 function DraggableLoginForm() {
-  const [position, setPosition] = useState({ x: 300, y: 250 });
+  const [position, setPosition] = useState({ x: 300, y: 100 });
   const [showSignUp, setShowSignUp] = useState(false);
   const sensors = useSensors(useSensor(PointerSensor));
 
@@ -35,13 +35,16 @@ function DraggableLoginForm() {
 
     return (
       <div className='loginFormDiv' ref={setNodeRef} style={style}>
-        <div className='loginFormDragDiv' {...listeners} {...attributes} >
+        <div className='loginFormDragDiv' {...listeners} {...attributes}>
           Voyatika OS
         </div>
-          {showSignUp ? <SignUp /> : <LoginForm />}
+        {showSignUp ? <SignUp onSignUpSuccess={() => setShowSignUp(false)} /> : <LoginForm />}
+        <div className='signUpDiv'>
+          <span className='signUpSpan'>{showSignUp ? "" : "Don't Have an Account?"}</span>
           <button onClick={() => setShowSignUp(!showSignUp)} className="toggleFormButton">
           {showSignUp ? "Back to Login" : "Sign Up"}
         </button>
+        </div>
       </div>
     );
   };

@@ -1,6 +1,6 @@
 #profilePortraitContainer{
     width: 100%;
-    height: 280px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -17,7 +17,8 @@
 
 .crewdbContentDiv h2{
     text-align: center;
-    margin: 0;
+    margin:0;
+    padding: 20px 0;
 }
 
 .crewdbContentDiv ul{
@@ -44,7 +45,7 @@ color:cadetblue;
 
 .crewDeleteButton{
     margin-left: 20px;
-    background-color: red;
+    background-color: rgb(235, 88, 144);
     border: 1px solid black;
     transition-duration: 200ms;
     padding: 5px 10px;
@@ -56,4 +57,62 @@ color:cadetblue;
 
 .crewDeleteButton:hover{
     background-color: rgb(163, 70, 70);
+}
+.profileButtonsDiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    
+    
+}
+.profileButtonsDiv button,.crewdbContentDiv form button{
+background-color: #d9d9d9;
+border: 1px solid black;
+border-radius: 5px;
+padding:5px;
+color: black;
+box-shadow: -2px 2px 0px 1px rgba(0, 0, 0, 0.25);
+-webkit-box-shadow: -2px 2px 0px 1px rgba(0, 0, 0, 0.25);
+-moz-box-shadow: -2px 2px 0px 1px rgba(0, 0, 0, 0.25);
+transition-duration: 200ms;
+}
+.profileButtonsDiv button:hover{
+    background-color: #bebebe;
+}
+
+.profileInfoDiv{
+    padding: 20px;
+}
+.crewdbContentDiv form button{
+    margin-left: 5px;
+}
+.crewdbContentDiv form button:hover{
+    background-color: #bebebe;
+}
+.editCancelButtonDiv{
+    width: 100%;
+}
+.editCancelButton{
+    margin-top: 5px;
+}
+.crewdbContentDiv form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.crewdbContentDiv form span{
+    width:100px;
+    display: block;
+}
+.crewdbContentDiv form label{
+    display: flex;
+    margin-bottom: 10px;
+}
+.crewdbContentDiv form input{
+    padding:5px;
+    background-color: white;
+    border:1px solid black;
+    color: black;
+    border-radius: 5px;
 }

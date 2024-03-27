@@ -82,7 +82,6 @@ function DailyNews() {
             <iframe
               title="nasa-video"
               src={apodData.url}
-              gesture="media"
               allow="encrypted-media"
               allowFullScreen
               className="apodVideo"

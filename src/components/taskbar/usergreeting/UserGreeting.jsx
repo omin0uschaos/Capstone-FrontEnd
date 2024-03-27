@@ -25,7 +25,7 @@ const UserGreeting = () => {
     fetchUserInfo();
   }, []);
 
-  if (!userDetails) return <div>Loading user information...</div>;
+  if (!userDetails) return <div className='greetingLoadingDiv'>Loading user information...</div>;
 
   return (
     <div id='userGreetingDiv'>Hello, <span id='userGreetingName'>{userDetails.personalinfo.first}</span>!</div>

@@ -44,6 +44,7 @@
     -webkit-box-shadow: -4px 4px 0px 1px #343434;
     -moz-box-shadow: -4px 4px 0px 1px #343434;
     transition-duration: 200ms;
+    cursor: pointer;
 }
 .login-container form button:hover{
     background-color: #a3a3a3;
@@ -83,4 +84,35 @@
     0%{background-position:0% 41%}
     50%{background-position:100% 60%}
     100%{background-position:0% 41%}
+}
+.signUpSpan{
+    color: black;
+    margin-right: 10px;
+}
+.signUpDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.signUpDiv button{
+    padding: 10px;
+    background-color: #d9d9d9;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    box-shadow: -4px 4px 0px 1px #343434;
+    -webkit-box-shadow: -4px 4px 0px 1px #343434;
+    -moz-box-shadow: -4px 4px 0px 1px #343434;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.toggleFormButton{
+    padding:5px;
+    background-color: #d9d9d9;
+}
+#signUpFormDiv h3{
+    text-align: center;
+    color: black;
 }
