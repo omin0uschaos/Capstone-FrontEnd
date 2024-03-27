@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import voslogo from '../assets/images/voslogo.svg';
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -41,6 +42,7 @@ function LoginForm() {
 
   return (
     <div className="login-container">
+      <img className='loginPageLogo' src={voslogo} alt="" />
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>

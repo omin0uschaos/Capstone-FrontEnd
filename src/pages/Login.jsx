@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { DndContext, useDraggable, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { useNavigate } from 'react-router-dom';
 import LoginForm from "../components/LoginForm";
+import SignUp from '../components/signup/SignUp';
 import './Login.css'
 
 function DraggableLoginForm() {
-  const [position, setPosition] = useState({ x: 250, y: 250 });
+  const [position, setPosition] = useState({ x: 300, y: 250 });
+  const [showSignUp, setShowSignUp] = useState(false);
   const sensors = useSensors(useSensor(PointerSensor));
 
   // This handler updates the position state after drag ends, for persistence.
@@ -36,7 +38,10 @@ function DraggableLoginForm() {
         <div className='loginFormDragDiv' {...listeners} {...attributes} >
           Voyatika OS
         </div>
-        <LoginForm />
+          {showSignUp ? <SignUp /> : <LoginForm />}
+          <button onClick={() => setShowSignUp(!showSignUp)} className="toggleFormButton">
+          {showSignUp ? "Back to Login" : "Sign Up"}
+        </button>
       </div>
     );
   };
