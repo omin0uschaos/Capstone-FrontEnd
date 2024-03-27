@@ -49,4 +49,5 @@
 }
 .newsNavigationButtons button:disabled{
     filter: opacity(0);
+    cursor:default;
 }

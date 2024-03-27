@@ -5,15 +5,18 @@ import DraggableWindow from './DraggableWindow';
 import CrewDb from '../crewdb/CrewDB';
 import DailyNews from '../dailynews/DailyNews';
 import Navigator from '../navigator/Navigator';
+import TaskList from '../tasklist/TaskList';
 import crewdbicon from '../../assets/images/crewdbicon.svg';
 import destinationicon from '../../assets/images/destinationsicon.svg';
 import newsicon from '../../assets/images/newsicon.svg';
+import taskicon from '../../assets/images/taskicon.svg';
 
 const DesktopIcons = () => {
   const [icons, setIcons] = useState([
     { id: 'Crew DB', src: crewdbicon, position: { x: 20, y: 20 }, component: CrewDb },
     { id: 'Daily News', src: newsicon, position: { x: 100, y: 20 }, component: DailyNews },
     { id: 'G-Nav', src: destinationicon, position: { x: 180, y: 20 }, component: Navigator },
+    { id: 'Tasker', src: taskicon, position: { x: 260, y: 20 }, component: TaskList },
   ]);
   const [openWindows, setOpenWindows] = useState([]);
   const sensors = useSensors(useSensor(PointerSensor));

@@ -55,9 +55,14 @@ const Navigator = () => {
   if (selectedDestination) {
     return (
       <div className="destinationDetails">
-        <button onClick={() => setSelectedDestination(null)}>Back to Navigator</button>
+            <div className='destinationButtonDiv'>     
+                <button onClick={() => setSelectedDestination(null)}>Back to Navigator</button>
+            </div>  
+        <div className='destinationPlanetBg'> 
+
+            {destinationImageUrl && <img className='destinationImg' src={destinationImageUrl} alt=      {selectedDestination.destinationName} />}
+        </div>
         <h2>{selectedDestination.destinationName}</h2>
-        {destinationImageUrl && <img src={destinationImageUrl} alt={selectedDestination.destinationName} />}
         <p>{selectedDestination.destinationDescription}</p>
       </div>
     );

@@ -19,6 +19,9 @@ function LoginForm() {
 
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
+        localStorage.setItem('username', username);
+
+
         setLoginStatus('Login successful');
         navigate('/home'); 
       }

@@ -14,4 +14,13 @@
     display: flex;
     width: 34px;
     height: 34px;
+    align-items: center;
+}
+
+#userGreetingDiv{
+    white-space: nowrap;
+    margin-left: 10px;
+}
+#userGreetingName{
+    font-weight: 700;
 }
