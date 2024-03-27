@@ -1,0 +1,7 @@
+.taskListContentDiv{
+    color: black;
+}
+.taskListContentDiv ul{
+    list-style-type: none;
+    margin: 0;
+}

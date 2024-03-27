@@ -50,7 +50,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://voyatikadb.onrender.com/api/user/add', formData);
+      const response = await axios.post('https://voyatikadb.onrender.com/api/users/user/add', formData);
       console.log(response.data.message);
     } catch (error) {
       console.error('Error signing up:', error.response.data.message);
