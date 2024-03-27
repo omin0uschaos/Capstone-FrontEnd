@@ -1,7 +1,84 @@
 .loginFormDiv{
-    background-color: greenyellow;
-    
+    background-color: #d9d9d9;
+    border: 1px solid black;
+    box-shadow: -10px 10px 0px 1px #343434;
+    -webkit-box-shadow: -10px 10px 0px 1px #343434;
+    -moz-box-shadow: -10px 10px 0px 1px #343434;
 }
 .login-container{
     padding: 50px;
+    color: black;
+}
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-container form{
+    display: flex;
+    flex-direction: column;
+
+}
+.login-container form div{
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.login-container form input{
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+
+}
+.login-container form button{
+    padding: 10px;
+    background-color: #d9d9d9;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    box-shadow: -4px 4px 0px 1px #343434;
+    -webkit-box-shadow: -4px 4px 0px 1px #343434;
+    -moz-box-shadow: -4px 4px 0px 1px #343434;
+    transition-duration: 200ms;
+}
+.login-container form button:hover{
+    background-color: #a3a3a3;
+}
+.login-container form button:active{
+    background-color: rgb(106, 181, 106);
+}
+.loginFormDragDiv{
+    cursor: grab; 
+    background-color: #28c996; 
+    padding: 10px; 
+    margin-bottom: 5px; 
+    user-select: none;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.loginPageDiv{
+    background: linear-gradient(143deg, #ff5fcc, #ce43fd, #f5b431);
+    background-size: 600% 600%;
+
+    -webkit-animation: loginFormBG 8s ease infinite;
+    -moz-animation: loginFormBG 8s ease infinite;
+    animation: loginFormBG 8s ease infinite;
+}
+
+@-webkit-keyframes loginFormBG {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@-moz-keyframes loginFormBG {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+@keyframes loginFormBG {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
 }

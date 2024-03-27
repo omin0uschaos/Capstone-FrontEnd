@@ -33,8 +33,8 @@ function DraggableLoginForm() {
 
     return (
       <div className='loginFormDiv' ref={setNodeRef} style={style}>
-        <div {...listeners} {...attributes} style={{ cursor: 'grab', backgroundColor: '#eee', padding: '10px', marginBottom: '5px', userSelect: 'none' }}>
-          Drag Here
+        <div className='loginFormDragDiv' {...listeners} {...attributes} >
+          Voyatika OS
         </div>
         <LoginForm />
       </div>
@@ -58,7 +58,7 @@ function Login() {
     }
   }, [navigate]);
   return (
-    <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+    <div className='loginPageDiv' style={{ width: '100vw', height: '100vh', position: 'relative' }}>
       <DraggableLoginForm />
     </div>
   );
