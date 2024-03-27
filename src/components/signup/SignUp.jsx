@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './SignUp.css'
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -50,32 +51,112 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const response = await axios.post('https://voyatikadb.onrender.com/api/user/add', formData);
-      console.log(response.data.message); // Handle response appropriately
+      console.log(response.data.message);
     } catch (error) {
       console.error('Error signing up:', error.response.data.message);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="username" value={formData.username} onChange={handleChange} placeholder="Username" required />
-      <input name="password" type="password" value={formData.password} onChange={handleChange} placeholder="Password" required />
-      <input name="portrait" value={formData.portrait} onChange={handleChange} placeholder="Portrait URL" />
-      <label>
-        Admin:
-        <input name="isAdmin" type="checkbox" checked={formData.isAdmin} onChange={handleChange} />
-      </label>
-      <select name="rank" value={formData.rank} onChange={handleChange} required>
-        <option value="">Select Rank</option>
-        {['SUPCOM', 'FA', 'VA', 'RA', 'CAPT', 'CDR', 'LCDR', 'LT', 'ENS', 'WO', 'CPO', 'PO', 'SN', 'No Rank'].map(rank => (
-          <option key={rank} value={rank}>{rank}</option>
-        ))}
-      </select>
-      {/* Repeat the above pattern for clearanceLevel, department, and other enum fields */}
-      <input name="personalinfo.first" value={formData.personalinfo.first} onChange={handleChange} placeholder="First Name" required />
-      {/* Repeat for other fields in personalinfo */}
+    <div id='signUpFormDiv'>
+<form onSubmit={handleSubmit}>
+      <input
+        name="username"
+        value={formData.username}
+        onChange={handleChange}
+        placeholder="Username"
+        required
+      />
+      <input
+        name="password"
+        type="password"
+        value={formData.password}
+        onChange={handleChange}
+        placeholder="Password"
+        required
+      />
+      <input
+        name="portrait"
+        value={formData.portrait}
+        onChange={handleChange}
+        placeholder="Portrait URL"
+      />
+        <select name="rank" value={formData.rank} onChange={handleChange} required>
+          <option value="">Select Rank</option>
+          {['SUPCOM', 'FA', 'VA', 'RA', 'CAPT', 'CDR', 'LCDR', 'LT', 'ENS', 'WO', 'CPO', 'PO', 'SN', 'No Rank'].map(
+            (rank) => (
+              <option key={rank} value={rank}>
+                {rank}
+              </option>
+            )
+          )}
+        </select>
+
+        <select name="department" value={formData.department} onChange={handleChange} required>
+          <option value="">Select Department</option>
+          {['CMD', 'XO', 'OPS', 'ENG', 'COMMS', 'MED', 'INT', 'SEC', 'SCI', 'NAV', 'LOG', 'SPC', 'ENL', 'No Job'].map(
+            (dept) => (
+              <option key={dept} value={dept}>
+                {dept}
+              </option>
+            )
+          )}
+        </select>
+      <input name="title" value={formData.title} onChange={handleChange} placeholder="Title" />
+
+      <h3>Personal Information</h3>
+      <input
+        name="personalinfo.first"
+        value={formData.personalinfo.first}
+        onChange={handleChange}
+        placeholder="First Name"
+        required
+      />
+      <input
+        name="personalinfo.last"
+        value={formData.personalinfo.last}
+        onChange={handleChange}
+        placeholder="Last Name"
+        required
+      />
+      <input
+        name="personalinfo.nickname"
+        value={formData.personalinfo.nickname}
+        onChange={handleChange}
+        placeholder="Nickname"
+      />
+      <input name="personalinfo.age" type="number" value={formData.personalinfo.age} onChange={handleChange} placeholder="Age" />
+      <input name="personalinfo.dob" value={formData.personalinfo.dob} onChange={handleChange} placeholder="Date of Birth" />
+        <select
+          name="personalinfo.homeplanet"
+          value={formData.personalinfo.homeplanet}
+          onChange={handleChange}
+        >
+          <option value="">Select Homeplanet</option>
+          {['Earth', 'Luna Prime', 'Enceladus', 'Mars', 'Europa', 'Ganymede', 'Titan'].map((planet) => (
+            <option key={planet} value={planet}>
+              {planet}
+            </option>
+          ))}
+        </select>
+
+
+        <select
+          name="personalinfo.military"
+          value={formData.personalinfo.military}
+          onChange={handleChange}
+        >
+          <option value="">Select Military Branch</option>
+          {['EDF', 'LSC', 'EUF', 'MSG', 'JV', 'TS', 'Non-Military'].map((branch) => (
+            <option key={branch} value={branch}>
+              {branch}
+            </option>
+          ))}
+        </select>
       <button type="submit">Sign Up</button>
     </form>
+
+    </div>
   );
 };
 

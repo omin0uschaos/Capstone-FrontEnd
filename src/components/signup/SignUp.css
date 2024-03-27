@@ -1,0 +1,39 @@
+#signUpFormDiv{
+    padding: 50px;
+}
+
+#signUpFormDiv form{
+    display: flex;
+    flex-direction: column;
+}
+
+#signUpFormDiv form input{
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 5px;
+}
+#signUpFormDiv form select{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+
+}
+
+#signUpFormDiv form button{
+    padding: 10px;
+    background-color: #d9d9d9;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    box-shadow: -4px 4px 0px 1px #343434;
+    -webkit-box-shadow: -4px 4px 0px 1px #343434;
+    -moz-box-shadow: -4px 4px 0px 1px #343434;
+    transition-duration: 200ms;
+}
+#signUpFormDiv form button:hover{
+    background-color: #a3a3a3;
+}
+#signUpFormDiv form button:active{
+    background-color: rgb(106, 181, 106);
+}

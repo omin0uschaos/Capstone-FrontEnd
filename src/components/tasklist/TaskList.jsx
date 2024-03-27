@@ -41,7 +41,7 @@ function TaskList() {
   const addTask = async () => {
     if (!userId) return;
     try {
-      await axios.post(`https://voyatikadb.onrender.com/api/users/task/add/${userId}`, {
+      await axios.post(`https://voyatikadb.onrender.com/api/users/user/task/add/${userId}`, {
         taskname: newTaskName,
         taskDetail: newTaskDetail,
         taskComplete: false
@@ -57,7 +57,7 @@ function TaskList() {
   const deleteTask = async (taskId) => {
     if (!userId) return;
     try {
-      await axios.delete(`https://voyatikadb.onrender.com/api/users/task/delete/${userId}/${taskId}`, {
+      await axios.delete(`https://voyatikadb.onrender.com/api/users/user/task/delete/${userId}/${taskId}`, {
         headers: { 'Authorization': token }
       });
       fetchUserInfo(); // Refresh tasks list
@@ -69,7 +69,7 @@ function TaskList() {
   const updateTask = async (taskId, updatedFields) => {
     if (!userId) return;
     try {
-      await axios.patch(`https://voyatikadb.onrender.com/api/users/task/update/${userId}/${taskId}`, updatedFields, {
+      await axios.patch(`https://voyatikadb.onrender.com/api/users/user/task/update/${userId}/${taskId}`, updatedFields, {
         headers: { 'Authorization': token }
       });
       fetchUserInfo(); // Refresh tasks list
