@@ -24,7 +24,7 @@ function LoginForm() {
 
 
         setLoginStatus('Login successful');
-        navigate('/home'); 
+        navigate('/loading'); 
       }
     } catch (error) {
       if (error.response) {

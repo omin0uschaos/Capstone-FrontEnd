@@ -1,4 +1,5 @@
 #desktopDiv{
     background-image: url('../assets/images/desktopbg.jpg');
     background-size: cover;
+    overflow: hidden;
 }
