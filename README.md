@@ -1,12 +1,15 @@
 # Voyatika OS - The Starship Orka Operating System
+![voslogo](https://github.com/omin0uschaos/Capstone-FrontEnd/assets/10238707/3ae9ef4d-95f5-4206-b410-122b688075c7)
 
 Welcome to the official repository of Voyatika OS, an immersive, interactive operating system designed for the fictional starship Orka. The name Voyatika is a creative blend of "Voyage" and the Greek adjective "Katikos" (Κατικός), which means "relating to travel" or "fit for a journey." This project is the culmination of my passion for both software development and the boundless possibilities of space exploration.
 
-## My Journey to Voyatika OS
+
+## My Journey to Voyatika OS!
 
 Creating Voyatika OS was a voyage of its own. I embarked on this project with a plethora of ideas, eager to create an operating system that would not only be functional but also an engaging part of the Orka's onboard experience. I started by jotting down features I envisioned for Voyatika OS. As deadlines loomed closer, I had to limit my ambitions, focusing on what was truly essential for launch while setting aside the stretch goals for future updates.
 
 ### Design and Development Odyssey
+<img width="1046" alt="voyatikafigmascreen" src="https://github.com/omin0uschaos/Capstone-FrontEnd/assets/10238707/ab1d5369-27d7-406d-8c0b-126dec4f1273">
 
 The blueprint of Voyatika OS began with wireframing in Figma, capturing the look and feel of the interface I dreamed of. This was a critical step in visualizing the user experience, guiding the aesthetic and functional design of the operating system. From there, I dived into the depths of database design, seeding it with data that would bring the Orka and its universe to life. However, this endeavor consumed more time than anticipated, leading to a race against time in the development of the front end.
 
