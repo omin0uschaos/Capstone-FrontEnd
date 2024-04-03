@@ -7,11 +7,14 @@ import DailyNews from '../dailynews/DailyNews';
 import Navigator from '../navigator/Navigator';
 import TaskList from '../tasklist/TaskList';
 import ShipViewer from '../shipview/ShipViewer';
+import ResourceManager from '../resourcemanager/ResourceManager';
+import MissionLog from '../missionlog/MissionLog';
 import crewdbicon from '../../assets/images/crewdbicon.svg';
 import destinationicon from '../../assets/images/destinationsicon.svg';
 import newsicon from '../../assets/images/newsicon.svg';
 import taskicon from '../../assets/images/taskicon.svg';
 import shipviewicon from '../../assets/images/shipviewericon.svg'
+import resourceicon from '../../assets/images/resourcesicon.svg'
 
 const DesktopIcons = () => {
   const [icons, setIcons] = useState([
@@ -20,6 +23,8 @@ const DesktopIcons = () => {
     { id: 'G-Nav', src: destinationicon, position: { x: 180, y: 20 }, component: Navigator },
     { id: 'Tasker', src: taskicon, position: { x: 260, y: 20 }, component: TaskList },
     { id: 'Ship Viewer', src: shipviewicon, position: { x: 340, y: 20 }, component: ShipViewer },
+    { id: 'Resources', src: resourceicon, position: { x: 420, y: 20 }, component: ResourceManager },
+    { id: 'Mission Log', src: resourceicon, position: { x: 500, y: 20 }, component: MissionLog },
   ]);
   const [openWindows, setOpenWindows] = useState([]);
   const sensors = useSensors(useSensor(PointerSensor));

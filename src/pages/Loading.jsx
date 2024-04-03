@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SvgAnimation from '../assets/images/vosanim.svg';
+import LoadingSVG from '../components/LoadingSVG';
 import './Loading.css'
 
 function LoadingPage() {
@@ -16,7 +17,7 @@ function LoadingPage() {
 
   return (
     <div className="loadingContainer">
-      <img src={SvgAnimation} alt="Loading..." className="svgAnimation"/>
+      <LoadingSVG />
       <p>Loading...</p>
     </div>
   );
