@@ -1,4 +1,4 @@
-# Voyatika OS - The Starship Orka Operating System
+![image](https://github.com/omin0uschaos/Voyatik-OS-MERN-Stack-APP-/assets/10238707/5f3a6148-e6a2-4769-bd7a-738a81b08be6)# Voyatika OS - The Starship Orka Operating System
 ![voslogo](https://github.com/omin0uschaos/Capstone-FrontEnd/assets/10238707/3ae9ef4d-95f5-4206-b410-122b688075c7)
 
 Welcome to the official repository of Voyatika OS, an immersive, interactive operating system designed for the fictional starship Orka. The name Voyatika is a creative blend of "Voyage" and the Greek adjective "Katikos" (Κατικός), which means "relating to travel" or "fit for a journey." This project is the culmination of my passion for both software development and the boundless possibilities of space exploration.
@@ -33,12 +33,15 @@ This technology stack was chosen for its flexibility, scalability, and to demons
 - **Daily News App**: Powered by NASA's APOD API, discover a new story each day from the cosmos, with navigational buttons to explore past entries.
 - **G-NAV (Galaxy Navigator)**: A galactic map offering a top-down view of the surrounding cosmos, with clickable planets revealing animated images and fascinating facts.
 - **Tasker App**: A comprehensive task manager allowing users to track, complete, add, or delete tasks, embodying the functionality of a desktop OS with draggable icons and windows.
+- - **3D Model Viewer**: Enabling users to explore the Orka in captivating 3D detail. (APRIL-UPDATE)
+- **Resources**: Look into the inventory of the ship; search through available resources. (APRIL-UPDATE)
+- **Mission Log**: Dive into the lore of different militaries within the Voyatika universe. (APRIL-UPDATE)
 
 ### The Voyage Ahead
 
 While Voyatika OS has set sail, the journey is far from over. Current challenges, like the signup feature's malfunction and real-time task updating in the Tasker app, are waypoints on my development roadmap. Future updates will include:
 
-- **3D Model Viewer**: Enabling users to explore the Orka in captivating 3D detail.
+
 - **Military Info App**: Dive into the lore of different militaries within the Voyatika universe.
 - **Enhanced UI Functionality**: Introducing window minimization, position saving, and more to enrich the desktop experience.
 - **Calendar App and Music Player**: Adding personal and entertainment value to the OS.
