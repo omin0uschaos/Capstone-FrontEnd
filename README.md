@@ -1,4 +1,4 @@
-![image](https://github.com/omin0uschaos/Voyatik-OS-MERN-Stack-APP-/assets/10238707/5f3a6148-e6a2-4769-bd7a-738a81b08be6)# Voyatika OS - The Starship Orka Operating System
+# Voyatika OS - The Starship Orka Operating System
 ![voslogo](https://github.com/omin0uschaos/Capstone-FrontEnd/assets/10238707/3ae9ef4d-95f5-4206-b410-122b688075c7)
 
 Welcome to the official repository of Voyatika OS, an immersive, interactive operating system designed for the fictional starship Orka. The name Voyatika is a creative blend of "Voyage" and the Greek adjective "Katikos" (Κατικός), which means "relating to travel" or "fit for a journey." This project is the culmination of my passion for both software development and the boundless possibilities of space exploration.
